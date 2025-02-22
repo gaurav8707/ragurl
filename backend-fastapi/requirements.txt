@@ -1,9 +1,10 @@
 fastapi
 uvicorn
-pydantic
 requests
 beautifulsoup4
 google-generativeai
 qdrant-client
 sentence-transformers
 numpy
+pydantic
+python-dotenv
