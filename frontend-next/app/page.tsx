@@ -2,7 +2,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-const API_BASE_URL = process.env.API_BASE_URL;
+const API_BASE_URL = "https://fastapi-rag-644291291076.asia-south1.run.app";
 
 export default function Home() {
   const [url, setUrl] = useState("");
