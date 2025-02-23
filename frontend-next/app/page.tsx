@@ -29,7 +29,7 @@ export default function Home() {
     setSuccess("");
 
     try {
-      const response = await axios.post(`${API_BASE_URL}/process-url/`, {
+      const response = await axios.post(`${API_BASE_URL}/process-url`, {
         url: url,
       });
 
@@ -60,7 +60,7 @@ export default function Home() {
     setDeleteSuccess("");
 
     try {
-      const response = await axios.delete(`${API_BASE_URL}/delete-url/`, {
+      const response = await axios.delete(`${API_BASE_URL}/delete-url`, {
         data: { url: url }, // Sending URL as request body
       });
 
@@ -91,7 +91,7 @@ export default function Home() {
     setQueryResponse("");
 
     try {
-      const response = await axios.post(`${API_BASE_URL}/query/`, {
+      const response = await axios.post(`${API_BASE_URL}/query`, {
         question: query,
       });
 
