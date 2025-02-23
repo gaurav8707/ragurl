@@ -80,11 +80,16 @@ The backend service should be running at [http://localhost:8000](http://localhos
    ```bash
    cd ../frontend-next
    ```
-2. Install dependencies:
+2. Update the API base URL in the code:
+   Open the frontend code file where `API_BASE_URL` is defined in `app/page.tsx` and replace the existing cloud URL with your local backend URL:
+   ```javascript
+   const API_BASE_URL = "http://localhost:8000";
+   ```
+3. Install dependencies:
    ```bash
    npm install
    ```
-3. Run the frontend service:
+4. Run the frontend service:
    ```bash
    npm run dev
    ```
@@ -107,7 +112,7 @@ The frontend connects to the backend using Axios for HTTP requests. CORS middlew
 
 - **Handling Subpages**: Currently, the app does not support extracting content from subpages. BFS and DFS approaches are planned for future improvements.
 - **CORS Policy Errors**: Encountered CORS policy issues while connecting the FastAPI backend with the Next.js frontend, resolved with proper CORS configuration.
-- **Deployment Challenges**: Deploying FastAPI on platforms like Render led to memory issues, so I opted for Google Cloud, which handled scaling more effectively.
+- **Deployment Issues**: Deploying FastAPI on platforms like Render led to memory issues, so I opted for Google Cloud, which handled scaling more effectively.
 
 ## Future Scope
 
