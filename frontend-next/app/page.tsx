@@ -2,7 +2,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:9999";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 export default function Home() {
   const [url, setUrl] = useState("");
