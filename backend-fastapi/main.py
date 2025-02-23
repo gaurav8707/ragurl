@@ -23,7 +23,7 @@ app = FastAPI(title="RAG Application")
 origins = [
     "http://localhost:3000",    # Next.js development server
     "http://127.0.0.1:3000",
-    "https://frontend-next-inky.vercel.app/",
+    "https://ragurl.vercel.app/,
 ]
 
 app.add_middleware(
