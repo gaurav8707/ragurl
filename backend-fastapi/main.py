@@ -16,7 +16,6 @@ from dotenv import load_dotenv
 # Load environment variables from .env
 load_dotenv()
 
-
 # Initialize FastAPI app
 app = FastAPI(title="RAG Application")
 
@@ -35,7 +34,6 @@ app.add_middleware(
     expose_headers=["*"],
     max_age=600,  # Cache preflight requests for 10 minutes
 )
-
 
 # Load Credentials from .env
 QDRANT_URL = os.getenv("QDRANT_URL")
@@ -227,4 +225,5 @@ async def delete_url(url_input: URLInput):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=9999)
+    port = int(os.getenv("PORT", 9999))  # Use Cloud Run's PORT if available, default to 9999
+    uvicorn.run(app, host="0.0.0.0", port=port)
