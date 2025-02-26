@@ -52,7 +52,7 @@ qdrant_client = QdrantClient(
 
 # Initialize Gemini
 genai.configure(api_key=GEMINI_API_KEY)
-model = genai.GenerativeModel('gemini-1.5-flash-8b')
+model = genai.GenerativeModel('gemini-2.0-flash')
 
 # Initialize sentence transformer
 encoder = SentenceTransformer('all-MiniLM-L6-v2')
