@@ -11,6 +11,13 @@ Welcome to **Gemini Harvester**! This project is a Retrieval-Augmented Generatio
 
 ## Tech Stack
 
+### Gemini 2.0 Flash Free-Tier Limits
+
+- **Requests per Minute (RPM):** 15
+- **Requests per Day (RPD):** 1,500
+- **Token Processing Limit:** 1,000,000 tokens per minute
+- **Context Window:** 1,000,000 tokens per request
+
 This project uses the following technologies:
 
 - **Backend**: FastAPI (Python)
